@@ -1,0 +1,12 @@
+<div class="wrapper">
+		<form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="form-signin" id="login-form">
+	    <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+		  <hr class="colorgraph"><br>
+		  <input type="text" formControlName="username" tabindex="1" class="form-control"  placeholder="Username" [ngClass]="{ 'is-invalid': submittedLogin && f.username.errors }">
+		  <input type="password" formControlName="password" tabindex="2" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submittedLogin && f.password.errors }">
+
+		  		  
+		 
+		  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>  			
+	</form>			
+</div>

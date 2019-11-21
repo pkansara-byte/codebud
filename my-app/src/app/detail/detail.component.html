@@ -1,0 +1,36 @@
+<div class="row" *ngIf="loaded">
+	<div class="col-md-8">				
+		<div class="panel panel-default  panel--styled">
+			<div class="panel-body">
+				<div class="col-md-12 panelTop">	
+					<!-- <div class="col-md-4">	
+						<img class="img-responsive" src="http://placehold.it/350x350" alt=""/>
+					</div> -->
+					<div class="col-md-8">	
+						<h2>{{detail.flight_name}}</h2>
+						<p>From:{{detail.from_location}}</p>
+						<p>To:{{detail.to_location}}</p>
+						<p>To:{{detail.on_date | date: 'dd/MM/yyyy'}}</p>
+						<p>Available Seats:{{detail.available_seats }}</p>
+					</div>
+				</div>
+				
+				<div class="col-md-12 panelBottom">
+					<div class="col-md-8">
+						<input type="number" name="" #seats value="1">
+						<h5><span class="itemPrice"> * RS. {{detail.price}}</span></h5>
+					</div>
+					<div class="col-md-4 text-left">
+						<button class="btn btn-lg btn-add-to-cart" [routerLink]="['/ticket']" [queryParams]="{flight: detail.flight_name,seats: seats.value}" *ngIf="isLogged == 'true'">Book</button>
+						<button class="btn btn-lg btn-add-to-cart" [routerLink]="['/login']" *ngIf="isLogged == 'false'">Book</button>	
+					</div>
+					<div class="col-md-4">
+						<div class="stars">
+						 <div id="stars" class="starrr"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

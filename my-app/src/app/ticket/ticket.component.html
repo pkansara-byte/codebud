@@ -1,0 +1,36 @@
+<div class="ticket" *ngIf="loaded">
+  <div class="stub">
+    <div class="top">
+      <span class="admit">flight</span>
+      <span class="line"></span>
+      <span class="num">
+        
+        <span>{{flight}}</span>
+      </span>
+    </div>
+    <div class="number">{{seats}}</div>
+    <div class="invite">
+      seats
+    </div>
+  </div>
+  <div class="check">
+    <!-- <div class="big">
+      You're <br> Invited
+    </div> -->
+    <div class="number">Rs {{detail.price}} * {{ seats }}</div>
+    <div class="info">
+      <section>
+        <div class="title">Date</div>
+        <div>{{detail.on_date | date: 'dd/MM/yyyy'}}</div>
+      </section>
+      <section>
+        <div class="title">From</div>
+        <div>{{detail.from_location}}</div>
+      </section>
+      <section>
+        <div class="title">To</div>
+        <div>{{detail.to_location}}</div>
+      </section>
+    </div>
+  </div>
+</div>
